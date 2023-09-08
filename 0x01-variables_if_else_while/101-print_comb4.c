@@ -17,8 +17,11 @@ int main(void)
 				putchar(i);
 				putchar(j);
 				putchar(k);
+				if (i + j + k != 168)
+				{
 					putchar(',');
 					putchar(' ');
+				}
 			}
 		}
 	}
