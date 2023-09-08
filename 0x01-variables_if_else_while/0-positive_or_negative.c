@@ -6,7 +6,7 @@
  */
 int main(void)
 {
-	int n;
+	long long n;
 
 	scanf("%d", &n);
 	if (n > 0)
