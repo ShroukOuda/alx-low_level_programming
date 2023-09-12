@@ -1,4 +1,4 @@
-#include <stdio.h>
+#include <stdio.hi>
 /**
  * main - check the code.
  *
@@ -19,8 +19,8 @@ int main(void)
 		n2 = sum;
 		if (sum >= 4000000)
 		{
-			printf("\n");
 			break;
 		}
 	}
+	printf("%d\n", s);
 }
