@@ -11,15 +11,16 @@ int main(void)
 	printf("%ld, %ld, ", n1, n2);
 	for (i = 3; i <= 50; i++)
 	{
-			sum = n1 + n2;
+		sum = n1 + n2;
 		n1 = n2;
 		n2 = sum;
 		printf("%ld", sum);
-		if (i != 50)
+		if (i == 50)
 		{
-			printf(", ");
+			printf("\n");
 		}
+		else
+			printf(", ");
 	}
-	printf("\n");
 	return (0);
 }
