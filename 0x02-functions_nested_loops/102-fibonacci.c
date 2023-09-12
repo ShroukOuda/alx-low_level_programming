@@ -6,7 +6,7 @@
  */
 int main(void)
 {
-	long long i, n1 = 1, n2 = 2, sum = 0;
+	long long int i, n1 = 1, n2 = 2, sum = 0;
 
 	printf("%lld, %lld, ", n1, n2);
 	for (i = 3; i <= 50; i++)
