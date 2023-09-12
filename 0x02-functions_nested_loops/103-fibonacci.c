@@ -10,6 +10,8 @@ int main(void)
 
 	for (i = 3; i < 40; i++)
 	{
+		if (sum < 4000000)
+		{
 		if (sum % 2 == 0)
 		{
 			s += sum;
@@ -17,10 +19,8 @@ int main(void)
 		sum = n1 + n2;
 		n1 = n2;
 		n2 = sum;
-		if (sum >= 4000000)
-		{
-			break;
 		}
 	}
 	printf("%d\n", s);
+	return (0);
 }
