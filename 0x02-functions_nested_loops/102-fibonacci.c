@@ -6,19 +6,19 @@
  */
 int main(void)
 {
-	int i, n1 = 1, n2 = 2, sum = 0;
+	long long i, n1 = 1, n2 = 2, sum = 0;
 
-	for (i = 1; i <= 50; i++)
+	printf("%lld, %lld, ", n1, n2);
+	for (i = 3; i <= 50; i++)
 	{
-		if (i == 1 || i == 2)
-		{
-			printf("%d, ", i);
-		}
-		else
 			sum = n1 + n2;
 		n1 = n2;
 		n2 = sum;
-		printf("%d, ", sum);
+		printf("%lld", sum);
+		if (i != 50)
+		{
+			printf(", ");
+		}
 	}
 	printf("\n");
 	return (0);
