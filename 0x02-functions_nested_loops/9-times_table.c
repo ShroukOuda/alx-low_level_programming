@@ -25,7 +25,15 @@ void times_table(void)
 			if (j != 9)
 			{
 			_putchar(',');
+			if (result > 9)
+			{
+				_putchar(' ');
+			}
+			else
+			{
 			_putchar(' ');
+			_putchar(' ');
+			}
 			}
 		}
 		_putchar('\n');
