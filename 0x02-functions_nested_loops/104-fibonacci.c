@@ -12,8 +12,8 @@ int main(void)
 	for (i = 3; i < 91; i++)
 	{
 		printf("%ld, ", n);
-		n = n + m;
-		m = n - m;
+		m = m + n;
+		n = m - n;
 	}
 	n1 = n / 1000000000;
 	n2 = n % 1000000000;
@@ -23,10 +23,10 @@ int main(void)
 	{
 		printf("%ld", n1 + (n2 / 1000000000));
 				printf("%ld", (n2 % 1000000000));
-		n1 = n1 + m1;
-		m1 = n1 - m1;
-		n2 = n2 + m2;
-		m2 = n2 - m2;
+		m1 = m1 + n1;
+		n1 = m1 - n1;
+		m2 = m2 + n2;
+		n2 = m2 - n2;
 		if (i == 98)
 		{
 			printf("\n");
