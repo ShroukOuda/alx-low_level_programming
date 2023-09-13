@@ -11,7 +11,7 @@ int main(void)
 	printf("%ld, ", n);
 	for (i = 3; i < 91; i++)
 	{
-		printf("%ld, ", n);
+		printf("%ld, ", m);
 		m = m + n;
 		n = m - n;
 	}
