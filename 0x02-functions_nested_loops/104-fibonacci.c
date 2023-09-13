@@ -6,10 +6,10 @@
  */
 int main(void)
 {
-	long int i, n = 1, m = 2, sum = 0, n1, n2, m1, m2, s = 0, c = 0;
+	long int i, n = 1, m = 2, sum = 0, n1, n2, m1, m2, s, c;
 
 	printf("%ld, %ld, ", n, m);
-	for (i = 3; i < 91; i++)
+	for (i = 3; i <= 91; i++)
 	{
 		sum = n + m;
 		n = m;
@@ -20,6 +20,8 @@ int main(void)
 	n2 = n % 1000000000;
 	m1 = m / 1000000000;
 	m2 = m % 1000000000;
+	s = sum;
+	c = sum;
 	for (i = 92; i < 99; i++)
 	{
 		s = n1 + m1;
