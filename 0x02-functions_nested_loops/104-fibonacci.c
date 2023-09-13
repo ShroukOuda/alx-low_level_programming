@@ -28,6 +28,6 @@ int main(void)
 		m2 = m2 + n2;
 		n2 = m2 - n2;
 	}
-
+	printf("\n");
 	return (0);
 }
