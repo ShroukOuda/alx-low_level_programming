@@ -9,7 +9,7 @@ int main(void)
 	long int i, n = 1, m = 2, sum = 0, n1, n2, m1, m2, s = 0, c = 0;
 
 	printf("%ld, %ld, ", n, m);
-	for (i = 3; i <= 91; i++)
+	for (i = 3; i < 91; i++)
 	{
 		sum = n + m;
 		n = m;
