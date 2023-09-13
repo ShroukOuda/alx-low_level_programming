@@ -12,8 +12,8 @@ int main(void)
 	for (i = 3; i <= 91; i++)
 	{
 		sum = n + m;
-		n1 = n2;
-		n2 = sum;
+		n = m;
+		m = sum;
 		printf("%ld, ", sum);
 	}
 	n1 = n / 1000000000;
