@@ -31,8 +31,12 @@ int _atoi(char *s)
 			}
 			break;
 		}
+		else
+		{
+			return (0);
+		}
 	}
-	return (void);
+
 }
 
 
