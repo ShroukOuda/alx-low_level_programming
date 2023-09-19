@@ -1,12 +1,12 @@
 #include "main.h"
 /**
- * _atoi - check the code.
- * @s: it's ptr
- * Return: Always 0.
- */
+* _atoi - check the code.
+* @s: it's ptr
+* Return: Always 0.
+*/
 int _atoi(char *s)
 {
-	int n = 0, i, r = 1;
+	int n = 0, i, r = 1, f = 0;
 
 	while (s[n])
 		n++;
@@ -22,6 +22,7 @@ int _atoi(char *s)
 		}
 		if (s[i] >= 48 && s[i] <= 57)
 		{
+			f = 1;
 			if (r < 0)
 				putchar('-');
 			while (s[i] >= 48 && s[i] <= 57)
@@ -31,9 +32,7 @@ int _atoi(char *s)
 			}
 			break;
 		}
-		else
-		{
-			return (0);
-		}
 	}
+	if (f == 0)
+	       return (0);
 }
