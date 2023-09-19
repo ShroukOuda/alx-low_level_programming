@@ -6,7 +6,7 @@
 */
 int _atoi(char *s)
 {
-	int n = 0, i, r = 1, f = 0;
+	int n = 0, i, r = 1, f = 0, num = 0, digit;
 
 	while (s[n])
 		n++;
@@ -23,11 +23,10 @@ int _atoi(char *s)
 		if (s[i] >= 48 && s[i] <= 57)
 		{
 			f = 1;
-			if (r < 0)
-				putchar('-');
 			while (s[i] >= 48 && s[i] <= 57)
 			{
-			putchar(s[i]);
+				digit = s[i] - 48;
+				num = num * 10 + digit;
 			i++;
 			}
 			break;
@@ -35,4 +34,6 @@ int _atoi(char *s)
 	}
 	if (f == 0)
 	       return (0);
+	else 
+		return (num);
 }
