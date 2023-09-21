@@ -14,7 +14,7 @@ char *cap_string(char *str)
 	{
 		if (str[i] == '\n' || str[i] == '\t' || str[i] == '?' ||
 				str[i] == ' ' || str[i] == ',' ||
-				str[i] == ';' || str[i] == '\"' || str[i] == '.'
+				str[i] == ';' || str[i] == '"' || str[i] == '.'
 				|| str[i] == '!' || str[i] == '(' || str[i] == ')'
 				|| str[i] == '}' || str[i] == '{')
 		{
