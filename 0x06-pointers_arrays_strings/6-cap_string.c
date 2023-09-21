@@ -6,7 +6,7 @@
 */
 char *cap_string(char *str)
 {
-	int n = 0, i, flag;
+	int n = 0, i;
 
 	while (str[n])
 		n++;
@@ -22,15 +22,10 @@ char *cap_string(char *str)
 				|| str[i] == '!' || str[i] == '(' || str[i] == ')'
 				|| str[i] == '}' || str[i] == '{')
 		{
-			flag = 1;
-		}
-		else if (str[i] >= 97 && str[i] <= 122 && flag == 1)
-		{
-			str[i] = str[i] - 32;
-		}
-		else
-		{
-			flag = 0;
+			if (str[i + 1] >= 97 && str[i + 1] <= 122)
+			{
+			str[i + 1] = str[i + 1] - 32;
+			}
 		}
 	}
 	return (str);
