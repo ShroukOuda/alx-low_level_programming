@@ -5,7 +5,7 @@
  * @size: it's an int
  * Return: Always 0.
  */
-void print_diagsums(int *a, int size)
+void print_diagsums(long int *a, int size)
 {
 	long int i, s1 = 0, s2 = 0;
 
