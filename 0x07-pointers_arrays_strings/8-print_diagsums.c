@@ -5,15 +5,17 @@
  * @size: it's an int
  * Return: Always 0.
  */
-void print_diagsums(long int *a, int size)
+void print_diagsums(int *a, int size)
 {
-	long int i, s1 = 0, s2 = 0;
+	int i, j, s1 = 0, s2 = 0;
 
 	for (i = 0; i < size; i++)
 	{
-		s1 += a[i];
-		s2 += a[size - i - 1];
-	a += 3;
+		s1 += a[i * size + i];
 	}
-	printf("%ld, %ld\n", s1, s2);
+	for (j = size - 1; j >= 0; j--)
+	{
+		s2 += a[j * size + (size - 1 - j)];
+				}
+	printf("%d, %d\n", s1, s2);
 }
