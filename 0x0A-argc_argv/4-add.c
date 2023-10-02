@@ -9,31 +9,25 @@
  */
 int main(int argc, char *argv[])
 {
-	int i, sum = 0, flag;
-
+	int i, sum = 0;
+	char *c;
+	
 	if (argc > 1)
 	{
-		for (i = 1; i < argc; i++)
-		{
-			if (!isdigit(argv[i]))
-			{
-				flag = 0;
-				break;
-			}
-			else
-			{
-				sum += atoi(argv[i]);
-				flag = 1;
-			}
-		}
-	if (flag)
+	for (i = 1; i < argc; i++)
 	{
+		for (c = argv[i]; *c != '\0'; c++)
+		{
+			if (*c < 48 || *c > 57)
+			{
+				return (printf("Error\n"), 1);
+			}
+				sum += atoi(argv[i]);
+		}
+	}
 	printf("%d\n", sum);
 	}
 	else
-		printf("Error\n");
-	}
-	else
 		printf("%d\n", 0);
-	return (1);
+	return (0);
 }
