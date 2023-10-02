@@ -1,6 +1,5 @@
 #include <stdio.h>
 #include <stdlib.h>
-#include <ctype.h>
 /**
  * main - check the code.
  * @argc: it's argc
@@ -16,14 +15,14 @@ int main(int argc, char *argv[])
 	{
 	for (i = 1; i < argc; i++)
 	{
-		for (c = argv[i]; *c != '\0'; c++)
+		for (c = argv[i]; *c; c++)
 		{
 			if (*c < 48 || *c > 57)
 			{
 				return (printf("Error\n"), 1);
 			}
-				sum += atoi(argv[i]);
 		}
+				sum += atoi(argv[i]);
 	}
 	printf("%d\n", sum);
 	}
