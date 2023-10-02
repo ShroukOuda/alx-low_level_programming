@@ -8,9 +8,12 @@
  */
 int main(int argc, char *argv[])
 {
-	if (argc > 1 && argc < 4)
+	int mul;
+
+	if (argc == 3)
 	{
-		printf("%d\n", atoi(argv[1]) * atoi(argv[2]));
+		mul = atoi(argv[1]) * atoi(argv[2]);
+		printf("%d\n", mul);
 	}
 	else
 		printf("Error\n");
