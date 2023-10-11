@@ -8,7 +8,6 @@
  *
  * Description: information of dog
  */
-#include <stdio.h>
 struct dog
 {
 	char *name;
@@ -17,4 +16,4 @@ struct dog
 };
 
 
-#endif 
+#endif
