@@ -23,7 +23,7 @@ unsigned int _pow(unsigned int n, unsigned int p)
  */
 unsigned int binary_to_uint(const char *b)
 {
-	unsigned int decimal = 0, len = 0;
+	unsigned int decimal = 0, len = 0, i = 0;
 
 	if (b == NULL)
 		return (0);
@@ -36,14 +36,12 @@ unsigned int binary_to_uint(const char *b)
 			return (0);
 		if (b[len] == '1')
 		{
-			decimal += _pow(2, len);
+			decimal += _pow(2, i);
 		}
+		i++;
 		len--;
 	}
-	if (len == 0)
-	{
 		if (b[len] == '1')
-			decimal += 1;
-	}
+			decimal += _pow(2, i);
 	return (decimal);
 }
