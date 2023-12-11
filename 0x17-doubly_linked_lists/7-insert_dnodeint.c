@@ -1,12 +1,12 @@
 #include "lists.h"
 #include <stdlib.h>
 /**
- * insert_dnodeint_at_index - check the code.
- * @h: it's a head
- * @idx: it's an index
- * @n: it's an int
- * Return: Always 0.
- */
+* insert_dnodeint_at_index - check the code.
+* @h: it's a head
+* @idx: it's an index
+* @n: it's an int
+* Return: Always 0.
+*/
 dlistint_t *insert_dnodeint_at_index(dlistint_t **h, unsigned int idx, int n)
 {
 	dlistint_t *temp = *h, *newnode;
@@ -28,7 +28,7 @@ dlistint_t *insert_dnodeint_at_index(dlistint_t **h, unsigned int idx, int n)
 	        add_dnodeint(h, newnode->n);
 		return (newnode);
 	}
-	if (idx == cnt)
+	if (idx == cnt - 1)
 	{
 		add_dnodeint_end(h, newnode->n);
 		return (newnode);
@@ -43,4 +43,3 @@ dlistint_t *insert_dnodeint_at_index(dlistint_t **h, unsigned int idx, int n)
 	temp->next = newnode;
 	return (newnode);
 }
-
