@@ -43,7 +43,7 @@ int hash_table_set(hash_table_t *ht, const char *key, const char *value)
 			free_node(current);
 			return (1);
 		}
-		while (current->next != NULL && strcmp(key, current->next->key))
+		while (current->next && strcmp(key, current->next->key))
 			current = current->next;
 		if (!strcmp(key, current->next->key))
 		{
@@ -54,8 +54,8 @@ int hash_table_set(hash_table_t *ht, const char *key, const char *value)
 		}
 		else
 		{
-			newnode->next = NULL;
 			current->next = newnode;
+			newnode->next = NULL;
 		}
 	}
 	return (1);
