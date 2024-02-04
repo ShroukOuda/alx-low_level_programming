@@ -45,7 +45,7 @@ int hash_table_set(hash_table_t *ht, const char *key, const char *value)
 		}
 		while (current->next && strcmp(key, current->next->key))
 			current = current->next;
-		if (!strcmp(key, current->key))
+		if (!strcmp(key, current->next->key))
 		{
 			newnode->next = current->next->next;
 			temp = current->next;
@@ -54,8 +54,8 @@ int hash_table_set(hash_table_t *ht, const char *key, const char *value)
 		}
 		else
 		{
-			newnode->next = ht->array[index];
-			ht->array[index] = newnode;
+			newnode->next = NULL;
+			current->next = newnode;
 		}
 	}
 	return (1);
